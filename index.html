@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+    <nav>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Menu Links (Initially hidden) -->
+        <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article id="home">
+            <h2>Home</h2>
+            <p>Welcome to my home page</p>
+        </article>
+        <article id="about">
+            <h2>About me</h2>
+            <p>This is shoug I'm system analyes and I'm cureently working on getting the microsoft Full-stack developer Professional Certificate </p>
+        </article>
+        <article id="project">
+            <h2>Project</h2>
+            <p>This is the Project section.</p>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('front-end')">Front-end</button>
+                <button onclick="filterProjects('back-end')">Back-end</button>
+            </div>
+            <article class="card">
+                <div class="project back-end">
+                    <img class="projectImg" src="download.png" alt="C#  project">
+                    <figcaption>C# project</figcaption>
+                    <p>A simple library management system </p>
+                </div>
+                <div class="project front-end">
+                    <img class="projectImg" src="react.png" alt="Project 2">
+                    <figcaption>Would you rather </figcaption>
+                    <p>Game designed to share Q between user and voting (using React-Redux) </p>
+                </div>
+                <div class="project back-end">
+                    <img class="projectImg" src="PHP.png" alt="Project 2">
+                    <figcaption>SharedEMR </figcaption>
+                    <p>Website helps the healthCare provider to access patient medical record from diffrent hospital</p>
+                </div>
+                <div class="project front-end">
+                    <img class="projectImg" src="react native.png" alt="Project 2">
+                    <figcaption>Mobile flashcards </figcaption>
+                    <p>Mobile App designed for student to Quiz themselves </p>
+                </div>
+            </article>
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </article>
+        <article id="Skills">
+            <h2>Skills</h2>
+            <p>This is the Skills section.</p>
+            <ul class="Skills-item">
+                <li class="Skill-item">HTML</li>
+                <li class="Skill-item">CSS</li>
+                <li class="Skill-item">JavaScript</li>
+                <li class="Skill-item">C#</li>
+            </ul>
+        </article>
+        <article id="contact">
+            <h2>Contact</h2>
+            <form  method="post" onsubmit="showPopup(event)">
+            <div>
+                <label for="name">Name:</label></br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label></br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label></br>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Web Page</p>
+    </footer>
+</body>
+</html>

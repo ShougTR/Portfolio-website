@@ -1,0 +1,280 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    position: relative;
+
+}
+
+/* Container for the main content */
+.card img {
+    justify-self: center;
+    max-width: 50%;
+    height: auto;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }  
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+/* Hamburger menu styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 20px;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+}
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+    /* Hide navigation links on small screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+
+    /* Show hamburger icon on small screens */
+    .hamburger {
+        display: flex;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+figcaption {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* Main content styles */
+main {
+    display: grid;
+    gap: 10px;
+    background: #ccc;
+}
+
+article {
+    background-color: #f1f1f1;
+    color: #000;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.Skills-item{
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.Skill-item{
+    position: relative;
+    padding-left: 30px;
+}
+.Skill-item::before{
+    content: "👉";
+    position: absolute;
+    left: 0;
+}
+.Skill-item:nth-child(1)::before{
+    content: '\f13b';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+}
+.Skill-item:nth-child(2)::before{
+    content: '\f13d'; /* Example icon for CSS */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+}
+
+.Skill-item:nth-child(3)::before{
+    content: '\f2bd'; /* Example icon for JS */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+}
+.Skill-item:nth-child(4)::before{
+    content: '\f41b'; /* Example icon for JS */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+}
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #555;
+}
+.card{
+    grid-template-columns: auto auto auto auto;
+    display: grid;
+    padding: 10px;
+    text-align: center;
+}
+.card div{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+}
+
+
+input, select,textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button[type=submit] {
+    width: 50%;
+    background-color: #555;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #444;
+  }
+  
+  form {
+    border-radius: 5px;
+    padding: 20px;
+  }
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #f4f4f4;
+        position: relative;
+        display: grid;
+    }
+    .modal-content {
+        width: 100%;
+      }
+    aside {
+        margin-top: 0;
+    }
+}
